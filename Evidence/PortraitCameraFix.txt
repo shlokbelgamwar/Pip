@@ -1,0 +1,4 @@
+Physical iPhone test: SessionTracking; Pip placed.
+Before: root/visual upright but projected world up (-243,34) pixels (leftward).
+After iOS portrait camera local-Z +90 compensation: raw rotation (28.7,18.9,271.4), camera rotation (28.7,18.9,1.4), projected world up (5.8,229.0) pixels (upward).
+Signed Xcode build, installation and launch succeeded.

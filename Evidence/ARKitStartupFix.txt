@@ -1,0 +1,3 @@
+Build Finished, Result: Success.
+Verified generated native ARKit availability call and linked libUnityARKit.a / ARKit.framework.
+** BUILD SUCCEEDED **

@@ -1,0 +1,6 @@
+PASS: actual managed-plane raycast path with synthetic bounded polygon reprojects to intended pixel within 1 px.
+PASS: character zero local position under refined anchor transform.
+PASS: Unity iOS export.
+PASS: signed native Xcode build.
+PASS: CoreDevice installation and process launch on connected phone.
+PENDING: actual visual placement and stability observed by user.

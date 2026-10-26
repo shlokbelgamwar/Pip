@@ -1,0 +1,2 @@
+Pip ARKit loader assigned: True
+Exiting batchmode successfully now!

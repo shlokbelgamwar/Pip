@@ -1,0 +1,6 @@
+PASS: provider source registers HandheldARInputDevice.
+PASS: both scenes use devicePosition/deviceRotation and contain no XRHMD bindings.
+PASS: injected handheld pose events drive actual saved camera driver within 1 mm and 0.1 degrees.
+PASS: Unity export and signed Xcode build.
+PASS: corrected app installed and launched on iPhone (2). Initial live diagnostics resolve ARKit devicePosition/deviceRotation; camera rotation matches raw device rotation; plane/raycast subsystems running.
+PENDING: completed handheld scan and placement verification (initial session initializing, zero planes).

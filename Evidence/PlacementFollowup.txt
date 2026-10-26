@@ -1,0 +1,4 @@
+PASS: zero camera height in both scenes and generator.
+PASS: explicit Place and Move actions on simulated floor, one companion.
+PASS: iOS export.
+PENDING: real phone retest of surface alignment, input, anchor creation and notch-safe layout.

@@ -1,0 +1,6 @@
+Shared system prompt: Backend/Cloud/personality.py
+10 backend tests passed.
+3 direct-Gemini synthetic-image cases passed.
+Approved production deployment: dpl_FFv1WcVttiyM4C1e9NYsLbcxJSCo READY.
+Live cloud synthetic abstract-image test: HTTP200, sleepy mood, grounded moon comparison.
+Signed iOS build: succeeded. Device installation not attempted in this step.

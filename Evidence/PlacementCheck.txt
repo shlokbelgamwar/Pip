@@ -1,0 +1,3 @@
+PASS: Editor Play Mode simulated 4 m placement, center-marker agreement, repositioning, one active companion and invalid-placement preservation.
+PASS: corrected iOS export completed.
+Physical-device test pending.

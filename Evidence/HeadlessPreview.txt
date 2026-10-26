@@ -1,0 +1,9 @@
+ArgumentOutOfRangeException: Index was out of range. Must be non-negative and less than the size of the collection.
+PIP VERIFIED: Explicit simulation scene
+PIP VERIFIED: Summon creates Pip on simulated floor
+PIP VERIFIED: Dim simulated light becomes Sleepy
+PIP VERIFIED: Autonomous procedural movement
+PIP VERIFIED: Touch changes internal energy
+PIP VERIFIED: Bright simulated light becomes Curious
+PIP VERIFIED: Reposition keeps one companion
+PIP PREVIEW INTEGRATION PASSED (not physical AR validation)

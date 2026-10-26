@@ -1,0 +1,8 @@
+Production: https://pip-vision.vercel.app
+Deployment: dpl_HYorozxJ9bMD2kTBpD79g4QisgvN, READY
+Cloud health200 ready:true; unauthenticated inspect401; synthetic mug inspect200 with object mug and remark.
+Seven local cloud-handler tests passed.
+Signed cloud iOS build succeeded. Installation pending: CoreDevice4016 device-services unavailable.
+No enforced Vercel WAF rate limit: dashboard demanded Pro; paid upgrade declined. Token auth and per-instance burst guard active.
+
+UPDATE: Following explicit user approval, cloud client installed and launched successfully on paired iPhone. Physical cloud Inspect verification pending.

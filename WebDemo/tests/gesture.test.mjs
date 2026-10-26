@@ -1,0 +1,5 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {beginScratch,moveScratch,isTap} from '../src/gesture.js';
+test('a tap remains a tap, jitter and holding do not become pets',()=>{const g=beginScratch(1,0,0,0);assert.equal(moveScratch(g,2,1,100),false);assert.equal(isTap(g,200),true);assert.equal(moveScratch(g,0,1,800),false);assert.equal(isTap(g,900),false);});
+test('one long swipe is not a scratch',()=>{const g=beginScratch(1,0,0,0);assert.equal(moveScratch(g,150,0,600),false);assert.equal(isTap(g,700),false);});
+test('deliberate back-and-forth rubbing works on both axes',()=>{for(const vertical of [false,true]){const g=beginScratch(1,0,0,0);const point=v=>vertical?[0,v]:[v,0];assert.equal(moveScratch(g,...point(30),200),false);assert.equal(moveScratch(g,...point(-30),400),false);assert.equal(moveScratch(g,...point(30),650),true);assert.equal(isTap(g,700),false);}});
+test('a quick zigzag does not count as petting',()=>{const g=beginScratch(1,0,0,0);moveScratch(g,30,0,40);moveScratch(g,-30,0,80);assert.equal(moveScratch(g,30,0,120),false);});

@@ -1,0 +1,34 @@
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uilds/
+[Mm]emoryCaptures/
+*.csproj
+*.sln
+*.slnx
+.DS_Store
+
+# Local API credentials
+.env
+.env.*
+!.env.example
+__pycache__/
+
+/Assets/StreamingAssets/pip-vision.json
+/Assets/StreamingAssets/pip-vision.json.meta
+
+.venv/
+.vercel/
+
+# Generated web dependencies and personal capture evidence
+node_modules/
+dist/
+/Evidence/Phone*/
+*.mobileprovision
+*.p12
+*.key
+*.cer
+*.ipa
+*.app/
