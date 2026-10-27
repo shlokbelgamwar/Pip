@@ -4,6 +4,19 @@ An original little companion inspired by the charm of fantastical game sidekicks
 
 **[Try Meet Pip in your browser](https://meet-pip.vercel.app/)**
 
+## iPhone app & Xcode build — review downloads
+
+**Completed Unity-to-Xcode Debug build for iPhone · October 26, 2026**
+
+| Download | What it contains |
+| --- | --- |
+| [Built iPhone app (.app ZIP)](https://github.com/shlokbelgamwar/Pip/releases/download/v0.1.0-build-review/Pip-iPhone-Built-App-Review.zip) | Compiled arm64 Pip.app with Unity frameworks, assets, and a build-result receipt. |
+| [Xcode project (ZIP)](https://github.com/shlokbelgamwar/Pip/releases/download/v0.1.0-build-review/Pip-Xcode-Project-Review.zip) | Generated Xcode export. Unzip and open `iOS/Unity-iPhone.xcodeproj` to inspect the native project. |
+
+[View the build release and notes](https://github.com/shlokbelgamwar/Pip/releases/tag/v0.1.0-build-review).
+
+These are public review copies with backend credentials and personal provisioning data removed. The app is ad-hoc signed for inspection and cannot be installed directly on an iPhone. Building the Xcode project for a device requires your own signing team and backend configuration.
+
 ## What is here
 
 - **Assets / Packages / ProjectSettings:** Unity 6 iPhone AR prototype, using AR Foundation and Apple ARKit 6.3.5. Surface placement, anchored floating companion, expressions, petting, object reactions, information, and local photo memories.
@@ -38,4 +51,4 @@ See [Backend/Cloud/README.md](Backend/Cloud/README.md). Configure your own Gemin
 
 The web demo is available by link. Native iOS sharing requires appropriate signing; free Personal Team provisioning has device and expiry restrictions. Live recognition depends on provider availability and quota. The web demo shares the hosted API's quota. Room placement and camera behavior still require physical-device validation after changes.
 
-This repository is a public source snapshot. Publishing it does not alter the existing Unity checkout or trigger changes to the deployed services. Generated builds, dependencies, API credentials, signing assets, logs, user settings, and personal phone screenshots are intentionally excluded.
+This repository is a public source snapshot. Publishing it does not alter the existing Unity checkout or trigger changes to the deployed services. Generated builds are provided separately as the sanitized review downloads linked above. Dependencies, API credentials, personal signing assets, logs, user settings, and personal phone screenshots are excluded from the source snapshot.
