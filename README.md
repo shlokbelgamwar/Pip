@@ -20,10 +20,8 @@ These are public review copies with backend credentials and personal provisionin
 ## What is here
 
 - **Assets / Packages / ProjectSettings:** Unity 6 iPhone AR prototype, using AR Foundation and Apple ARKit 6.3.5. Surface placement, anchored floating companion, expressions, petting, object reactions, information, and local photo memories.
-- **Backend:** local development server and Vercel/Gemini recognition proxy; shared personality and response rules.
 - **WebDemo:** separate Vite / Three.js browser companion with camera-based reactions, petting, Tell me more, and downloadable moments. It uses screen-space rendering rather than ARKit anchors.
 - **Evidence:** staged Unity previews, character/UI iterations, and the presentation QR. These are not phone captures unless explicitly labeled.
-- **Backups:** earlier source iterations.
 - **docs/development:** original project notes, implementation history, typography notes, and handoffs. Historical entries can describe superseded behavior; read newest validation entries for current status.
 
 ## Try the hosted web experience
@@ -83,41 +81,7 @@ Keep the real `pip-vision.json` private. The included example is a placeholder a
 
 ## Set up recognition
 
-The Gemini API key belongs **only on your backend**. Unity uses an app bearer token; the web proxy keeps that token on its server. Frame inspection sends the selected image through the backend to Google Gemini.
-
-### Cloud backend — Vercel
-
-1. Obtain your own Gemini API key and generate your own app bearer token.
-2. Create a Vercel project using **`Backend/Cloud` as the root directory** and the Flask framework. The included configuration uses Python 3.12 or later.
-3. Configure server environment variables in that project:
-   - `GEMINI_API_KEY`: your Gemini key.
-   - `PIP_CLIENT_TOKEN`: your app bearer token.
-   - `GEMINI_MODEL`: the configured default is `gemini-3.5-flash-lite`; confirm the model is available to your account.
-   - `PIP_VISION_ENABLED`: `true` to enable image processing.
-4. Deploy that directory. Never upload `Backend/.env`, private Unity configuration, signing files, or phone images.
-5. Open `https://YOUR-BACKEND/health`. A response containing `"ready": true` confirms the required configuration is present; it does not verify a successful Gemini request.
-6. Use `https://YOUR-BACKEND/inspect` and the matching bearer token in your client configuration. Review the image-processing notice before performing a scan.
-
-The backend supports a playful `react` response and an informational `learn` response using the same frame. Recognition depends on provider availability and quota. See [Backend/Cloud/README.md](Backend/Cloud/README.md) for response modes and prototype limits.
-
-### Optional local development backend
-
-From the repository root:
-
-```sh
-cp Backend/.env.example Backend/.env
-```
-
-Edit the private `Backend/.env` with your own Gemini key and app bearer token. Start the development server:
-
-```sh
-cd Backend
-python3 server.py
-```
-
-It listens on `127.0.0.1:8765` by default. For a physical phone on trusted local Wi-Fi, start it with `PIP_BIND=YOUR_MAC_WIFI_IP python3 server.py`, keep the terminal open, and configure the Unity client endpoint as `http://YOUR_MAC_WIFI_IP:8765/inspect`. The phone must reach the Mac, and iOS local-network and transport settings must permit that development connection. Campus or guest Wi-Fi can block communication between devices. Use the HTTPS cloud backend for sharing.
-
-See [Backend/README.md](Backend/README.md) for the local server's request and session limits. This optional development server uses HTTP and should not be exposed directly to the internet.
+Backend implementation and earlier source backups are not included in the current public snapshot. To enable recognition in your own build, supply your own compatible HTTPS `/inspect` service and configure its endpoint and app bearer token privately. Keep provider API keys on your server.
 
 ## Run or deploy your own web demo
 
@@ -157,14 +121,10 @@ These commands exercise source checks; they do not replace testing AR tracking, 
 # From the repository root
 cd WebDemo
 npm test
-cd ../Backend/Cloud
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python -m unittest -v test_app.py test_vision.py
 ```
 
 ## Sharing and limitations
 
 The web demo is available by link. Native iOS sharing requires appropriate signing; free Personal Team provisioning has device and expiry restrictions. Live recognition depends on provider availability and quota. The web demo shares the hosted API's quota. Room placement and camera behavior still require physical-device validation after changes.
 
-This repository is a public source snapshot. Publishing it does not alter the existing Unity checkout or trigger changes to the deployed services. Generated builds are provided separately as the sanitized review downloads linked above. Dependencies, API credentials, personal signing assets, logs, user settings, and personal phone screenshots are excluded from the source snapshot.
+This repository is a public source snapshot with `Backend` and `Backups` omitted from the current branch; earlier commits can still contain them. Publishing it does not alter the existing Unity checkout or trigger changes to the deployed services. Generated builds are provided separately as the sanitized review downloads linked above. Dependencies, API credentials, personal signing assets, logs, user settings, and personal phone screenshots are excluded from the source snapshot.
